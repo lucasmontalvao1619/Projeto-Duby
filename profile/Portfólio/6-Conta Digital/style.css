@@ -1,0 +1,466 @@
+:root {
+    --primary-green: #00542D;
+    --secondary-green: #007F4E;
+    --light-green-bg: #E6F2E9;
+    --accent-red: #D32F2F;
+    --accent-green: #388E3C;
+    --text-color-dark: #212529;
+    --text-color-light: #FFFFFF;
+    --text-color-medium: #495057;
+    --border-color: #DEE2E6;
+    --card-bg: #FFFFFF;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --header-height: 70px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F0F2F5;
+    color: var(--text-color-dark);
+    line-height: 1.6;
+}
+
+.app-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    min-height: 100vh;
+}
+
+.app-header {
+    background-color: var(--primary-green);
+    color: var(--text-color-light);
+    padding: 0 20px;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info span {
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+.user-icon {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 2px solid var(--text-color-light);
+    background-color: #ddd;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+.account-overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.balance-card {
+    background-color: var(--primary-green);
+    color: var(--text-color-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-header {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 5px;
+}
+
+.balance-amount {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.summary-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.summary-card {
+    padding: 15px;
+}
+
+.summary-card.entradas {
+    border-left: 5px solid var(--accent-green);
+}
+
+.summary-card.saidas {
+    border-left: 5px solid var(--accent-red);
+}
+
+.summary-amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.summary-card.entradas .summary-amount {
+    color: var(--accent-green);
+}
+
+.summary-card.saidas .summary-amount {
+    color: var(--accent-red);
+}
+
+.main-features {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.insurance-promo {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+.insurance-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.insurance-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    color: var(--text-color-light);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+    width: 100%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.quick-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.action-button {
+    background-color: var(--card-bg);
+    color: var(--primary-green);
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.action-button:hover {
+    background-color: #e9ecef;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.action-button img {
+    height: 24px;
+    margin-right: 12px;
+}
+
+.pix-area {
+    background-color: var(--light-green-bg);
+}
+
+.pix-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--primary-green);
+}
+
+.pix-tab-button {
+    flex-grow: 1;
+    padding: 12px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 4px solid transparent;
+    color: var(--text-color-medium);
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+.pix-tab-button.active {
+    color: var(--primary-green);
+    border-bottom-color: var(--primary-green);
+    font-weight: bold;
+}
+
+.pix-form {
+    padding-top: 10px;
+}
+
+.pix-form h3 {
+    color: var(--primary-green);
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: var(--text-color-dark);
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus {
+    border-color: var(--primary-green);
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 127, 78, 0.25);
+}
+
+.form-error-message {
+    color: var(--accent-red);
+    font-size: 0.85rem;
+    min-height: 1.2em;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.btn-submit-pix {
+    background-color: var(--secondary-green);
+    color: var(--text-color-light);
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-submit-pix:hover {
+    background-color: var(--primary-green);
+}
+
+
+
+.transactions-title {
+    color: var(--primary-green);
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 1.3rem;
+}
+
+.transactions-list {
+    list-style: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.transactions-list li {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+.transactions-list li:last-child {
+    border-bottom: none;
+}
+
+.transaction-icon {
+    height: 24px;
+    width: 24px;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.transaction-details {
+    flex-grow: 1;
+}
+
+.transaction-details strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.transaction-details .type,
+.transaction-details .id {
+    font-size: 0.8rem;
+    color: var(--text-color-medium);
+    display: block;
+}
+
+.transaction-details .date-time {
+    font-size: 0.8rem;
+    color: var(--text-color-medium);
+    display: block;
+    margin-top: 2px;
+}
+
+.transaction-amount {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 15px;
+    white-space: nowrap;
+}
+
+.transaction-entry .transaction-amount {
+    color: var(--accent-green);
+}
+
+.transaction-exit .transaction-amount {
+    color: var(--accent-red);
+}
+
+.transaction-entry strong {
+    color: var(--accent-green);
+}
+
+.transaction-exit strong {
+    color: var(--accent-red);
+}
+
+.no-transactions {
+    color: var(--text-color-medium);
+    text-align: center;
+    padding: 20px 0 !important;
+    font-style: italic;
+}
+
+.app-footer {
+    background-color: var(--primary-green);
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.85rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media (max-width: 992px) {
+    .account-overview {
+        grid-template-columns: 1fr;
+    }
+    .main-features {
+        grid-template-columns: 1fr;
+    }
+    .insurance-promo {
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-header {
+        height: auto;
+        padding: 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+    .card {
+        padding: 15px;
+    }
+
+    .balance-amount {
+        font-size: 1.8rem;
+    }
+    .summary-amount {
+        font-size: 1.3rem;
+    }
+
+    .quick-actions {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .pix-tabs {
+        margin-bottom: 15px;
+    }
+    .pix-tab-button {
+        font-size: 1rem;
+        padding: 10px 5px;
+    }
+    .btn-submit-pix {
+        font-size: 0.95rem;
+        padding: 10px 20px;
+    }
+
+    .transactions-title {
+        font-size: 1.15rem;
+    }
+    .transactions-list li {
+        flex-wrap: wrap;
+    }
+    .transaction-amount {
+        margin-left: 0;
+        width: 100%;
+        text-align: right;
+        margin-top: 5px;
+    }
+}

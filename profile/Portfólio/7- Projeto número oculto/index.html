@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Número Oculto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Jogo do Número Oculto</h1>
+        
+        <div id="setup-phase" class="phase">
+            <h2>Fase de Configuração</h2>
+            <p>Jogador 1, digite um número entre 1 e 100:</p>
+            <input type="number" id="hidden-number" min="1" max="100">
+            <button id="set-number">Definir Número</button>
+        </div>
+        
+        <div id="guess-phase" class="phase hidden">
+            <h2>Fase de Adivinhação</h2>
+            <p>Jogador 2, tente adivinhar o número (você tem <span id="attempts-left">5</span> tentativas):</p>
+            <input type="number" id="guess-input" min="1" max="100">
+            <button id="submit-guess">Chutar</button>
+            <div id="feedback" class="feedback"></div>
+        </div>
+        
+        <div id="result-phase" class="phase hidden">
+            <h2>Resultado Final</h2>
+            <p id="result-message"></p>
+            <button id="play-again">Jogar Novamente</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
