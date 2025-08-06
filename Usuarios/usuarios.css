@@ -1,0 +1,320 @@
+.conteudo {
+  display: flex;
+  gap: 1rem;
+}
+   
+.cartaoTabela {
+  flex: 1 0 0;
+}
+
+.cabecalhoRelatorio h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.tag {
+    padding: 4px 6px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.9em;
+  }
+  .admin {background: rgba(65, 40, 132, 0.30); color: #412884;}
+  .gerente { background: rgba(33, 150, 243, 0.30); color: #0061BE; }
+  .analista { background: rgba(76, 175, 80, 0.30); color: #197C1D;}
+  .operador { background: rgba(251, 140, 0, 0.30); color: #BA4B00;}
+
+.cartao {
+    height: 100%;
+    width: 340px;
+}
+
+.perfilUsuario {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.avatarPerfil {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #E9D5FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primario);
+}
+
+.infoPerfil {
+    margin-left: 0.75rem;
+}
+
+.infoPerfil h3 {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.infoPerfil p {
+    font-size: 0.75rem;
+    color: var(--cinza-500);
+}
+
+#funcao{
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#permissao{
+  font-size: 14px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+#permissao h3{
+  padding-bottom: 14px;
+}
+.permissao {
+  background-color: var(--th);
+  padding: 2px 7px;
+  border-radius: 5px;
+  font-size: 12px;
+  display: inline-flex;
+  margin: 2px;
+}
+
+.listaNotificacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.notificacoes h3{
+  font-size: 16px;
+  padding-bottom: 14px;
+}
+
+.itemNotificacao {
+    background-color: var(--th);
+    border-radius: 8px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.conteudoNotificacao h4 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.conteudoNotificacao p {
+    font-size: 0.75rem;
+    color: var(--texto-p);
+}
+
+#btnOpenForm:hover {
+    background-color: #322871;
+
+}
+.tabela td {
+        cursor: pointer;        
+    }
+.tabela tr:hover {
+        background-color: var(--th);     
+    }
+
+#btnOpenForm {
+  padding: 8px;
+}    
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    
+}
+
+  .modal {
+    background: #F2F2F2;
+    padding: 30px;
+    width: 650px;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    gap: 37px 45px;
+  }
+  
+  .modal h2 {
+    color: #3b2b7e;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.64px;
+    margin-bottom: 5px;
+  }
+  
+  .modal p {
+    color: #888484;
+    font-size: 16px;
+    line-height: 28px; 
+    margin-bottom: 20px;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  
+  .form-grid label {
+    font-weight: 600;
+    margin-bottom: 4px;
+    display: block;
+    padding: 4px;
+  }
+  
+  .form-grid input,
+  .form-grid select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #D9D9D9;
+  }
+  
+  .form-actions {
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .form-actions button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  #btnCancel {
+    background: #ddd;
+    
+  }
+  #btnCancel:hover {
+    background: #ccc;
+  }
+  
+  .form-actions button[type="submit"] {
+    background: #3b2b7e;
+    color: white;
+    box-shadow:   1px 2px 2px rgba(0,0,0,0.2);
+  }
+  .form-actions button[type="submit"]:hover {
+    background: #302565;
+  }
+
+  .cabecalhoDireita {
+    padding: 0.3rem;
+    background-color: #fafafa;
+    box-shadow: 4px 4px 54px 0px rgba(65, 40, 132, 0.10);
+    border-radius: 12px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cabecalhoBusca {
+    position: relative;
+}
+
+.cabecalhoIcone {
+    position: absolute;
+    left: 0.625rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+    width: 1rem;
+    height: 1rem;
+}
+
+.cabecalhoIcones {
+    width: 1.2rem;
+}
+
+.cabecalhoInput {
+    width: 220px;
+    padding: 0.5rem 0.75rem 0.5rem 2rem;
+    border: 1px solid #f0f0f0;
+    border-radius: var(--raioBorda);
+    outline: none;
+}
+
+.cabecalhoBotao {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabecalhoBotao:hover {
+    background-color: var(--corCinzaClaro);
+}
+
+@media (max-width:640px) {
+    .conteudo {
+        flex-direction: column;
+    } 
+    .cabecalho {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        width: 100%;
+    }
+    .cabecalhoDireita {
+        display: none;
+    }
+    .cabecalho h1 {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .cartaoTabela {
+        width: 100%;
+    }
+    .tabela {
+        width: 100%;
+        max-width: 100%;
+        font-size: 12px;         
+    }
+    .tabela td {
+        cursor: pointer;        
+    }
+    .modal {
+        max-width: 90%;
+    }
+    .cartao {
+        width: 100%;
+        max-width: 100%;
+    }
+    button.botaoAcao.primario {
+        font-size: 13px;
+    }
+}

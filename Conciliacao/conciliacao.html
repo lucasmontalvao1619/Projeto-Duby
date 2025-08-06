@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="conciliacao.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../Assets/sidebar.js"></script>
+  </head>
+  <body>
+    <main class="conteudoPrincipal">
+      <header class="cabecalho">
+        <h1>Conciliação</h1>
+                <div class="barraNotificacao">
+
+            <div class="iconeBarra" id="seletorCategoria">
+                <i data-lucide="bell"></i>
+            </div>
+            <div class="imgBarra">
+                <i data-lucide="user"></i>
+            </div>
+        </div>
+      </header>
+
+      <div class="cardsResumo">
+        <div class="card">
+          <div class="conteudoCard">
+            <h3>Total de Transações</h3>
+            <p class="valor">1.258</p>
+            <p class="subTexto">R$ 458.750,00</p>
+          </div>
+        </div>
+
+        <div class="card verde">
+          <div class="iconeCard verde">
+            <i class="iconeResumo" data-lucide="check"></i>
+          </div>
+          <div class="conteudoCard">
+            <h3>Conciliado</h3>
+            <p class="valor">86%</p>
+            <p class="subTexto">225 1.087 transações • R$ 392.350,00</p>
+          </div>
+        </div>
+
+        <div class="card azul">
+          <div class="iconeCard azul">
+            <i class="iconeResumo" data-lucide="clock-4"></i>
+          </div>
+          <div class="conteudoCard">
+            <h3>Pendente</h3>
+            <p class="valor">8%</p>
+            <p class="subTexto">98 transações • R$ 42.800,00</p>
+          </div>
+        </div>
+        <div class="card amarelo" data-tab="divergencias">
+          <div class="iconeCard amarelo">
+            <i class="iconeResumo" data-lucide="triangle-alert"></i>
+          </div>
+          <div class="conteudoCard">
+            <h3>Divergente</h3>
+            <p class="valor">6%</p>
+            <p class="subTexto">73 transações • R$ 23.600,00</p>
+          </div>
+        </div>
+      </div>
+
+<div class="cartao gap">
+  <div class="cartaoCabecalho">
+    <h2>Filtros</h2>
+    <p>Os filtros tambem alteram os cards de resumo.</p>
+  </div>
+  <div class="filtros">
+    <div class="barraPesquisa">
+      <input type="search" id="pesquisaGeral" placeholder="Buscar em tudo" class="pesquisaInput" />
+    </div>
+  
+    <input type="date" id="filtroData" class="filtro-data">
+  
+    <select id="filtroAdquirente" class="filtro-select">
+    </select>
+  
+    <select id="filtroBanco" class="filtro-select">
+    </select>
+  
+    <select id="filtroStatus" class="filtro-select">
+    </select>
+  
+    <button id="btnFiltrar" class="btn-filtrar">Filtrar</button>
+    <button id="btnLimpar" class="btn-limpar">Limpar</button>
+  </div>
+</div>
+
+
+      <div class="cartaoTabela">
+        <table class="tabela">
+          <thead class="tabelaCabecalho">
+            <tr>
+              <th>Data</th>
+              <th>Transação</th>
+              <th>Adquirente</th>
+              <th>Banco</th>
+              <th>Esperado</th>
+              <th>Recebido</th>
+              <th>Diferença</th>
+              <th>Status</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody class="tabelaCorpo">
+
+          </tbody>
+        </table>
+      </div>
+      
+    </main>
+    <script src="conciliacao.js"></script>
+    <script src="../Assets/sistema-de-conciliacao.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        lucide.createIcons();
+      });
+    </script>
+  </body>
+</html>

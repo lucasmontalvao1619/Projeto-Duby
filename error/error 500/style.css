@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, #F6F6F6, #E2E2E2, #E2E2E2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #322871;
+    flex-direction: column; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    width: 100%; 
+}
+
+.error{
+    font-size: 30px;
+    margin-bottom: 0;
+    font-weight: bold;
+    margin-bottom: -14px;
+    
+}
+
+.errorTitulo {
+    font-size: 150px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+letter-spacing: -0.5px;
+}
+
+.errorMsg {
+    color: #322871;
+text-align: center;
+font-size: 30px;
+font-weight: bold;
+line-height: 120%;
+letter-spacing: 0.25px;
+}
+
+.descricao {
+    font-size: 16px;
+    max-width: 400px;
+    margin: 0 auto 30px auto;
+    color: #666;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#tentar {
+    background-color: #322871;
+    color: white;
+}
+#tentar:hover {
+    background-color: #262756;
+}
+
+#voltar {
+    background-color: #4CAF50;
+    color: white;
+}
+#voltar:hover {
+    background-color: #45a049;
+}
+
+.logo {
+    position: fixed;
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 09vw; 
+    margin: 0; 
+}
+
+@media (max-width: 600px) {
+    .errorTitulo {
+        font-size: 100px;
+    }
+    .errorMsg {
+        font-size: 24px;
+    }
+    .descricao {
+        font-size: 14px;
+    }
+    button {
+        font-size: 14px;
+    }
+    .logo {
+    position: fixed;
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 22vw; 
+    margin: 0; 
+}
+}

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="configuracoes.css" />
+  </head>
+  <body>
+    <main class="conteudoPrincipal">
+      <header class="cabecalho">
+        <h1>Configurações</h1>
+        <div class="barraNotificacao">
+
+          <div class="iconeBarra" id="seletorCategoria">
+            <i data-lucide="bell"></i>
+          </div>
+          <div class="imgBarra">
+            <i data-lucide="user"></i>
+          </div>
+        </div>
+      </header>
+
+      <div class="abasRelatorio fr5">
+        <button class="botaoAba ativo" data-relatorio="aba1">Dados</button>
+        <button class="botaoAba" data-relatorio="aba2">Planos</button>
+        <button class="botaoAba" data-relatorio="aba3">Notificações</button>
+        <button class="botaoAba" data-relatorio="aba4">Segurança</button>
+        <button class="botaoAba" data-relatorio="aba5">Integrações</button>
+      </div>
+      <div class="trocaDeAbas ativo" id="aba1">
+
+        <div class="cartaoTabela">
+          <div class="cabecalhoRelatorio">
+            <div>
+              <h3>Informações da Empresa</h3>
+              <p>
+                Configure as informações básicas da sua empresa que serão usadas
+                em relatórios e documentos.
+              </p>
+            </div>
+          </div>
+
+          <div class="tabelaContainer">
+            <div class="grid">
+              <div class="campos">
+                <label>Nome Fantasia</label>
+                <input type="text" />
+              </div>
+              <div class="campos">
+                <label>Razão Social</label>
+                <input type="text" />
+              </div>
+              <div class="campos">
+                <label>CNPJ</label>
+                <input type="text" />
+              </div>
+              <div class="campos">
+                <label>Email</label>
+                <input type="email" />
+              </div>
+            </div>
+            <hr class="linha" />
+            <div class="campos">
+              <label>Telefone</label>
+              <input type="text" />
+            </div>
+            <div class="grid2">
+              <div class="campos">
+                <label>Nome do Responsável Legal</label>
+                <input type="text" />
+              </div>
+              <div class="campos">
+                <label>Endereço</label>
+                <input type="text" />
+              </div>
+              <div class="campos">
+                <label>Rede Social da Empresa</label>
+                <input type="text" />
+              </div>
+            </div>
+            <div class="botaoSalvar">
+              <button id="botaoSalvar" class="botaoAcao secundario">Salvar</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="trocaDeAbas" id="aba2">
+        <div class="cartoesGap">
+          <h2 class="secaoTitulo">Detalhes do Plano</h2>
+
+            <div class="planos">
+
+              <div class="cartao" id="planoBasico" style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <h3>Básico</h3>
+                  <p class="preco">R$ 99/mês</p>
+                  <p class="descricao">
+                    Para pequenas empresas que estão começando
+                  </p>
+                  <ul class="listaBeneficios">
+                    <li>Até 500 transações/mês</li>
+                    <li>Conciliação manual</li>
+                    <li>Relatórios básicos</li>
+                    <li>1 usuário</li>
+                    <li>Suporte por email</li>
+                  </ul>
+                </div>
+                
+                <div><button class="botaoAcao secundario" id="botaoPlanos">Selecionar Plano</button></div>
+              </div>
+
+              <div class="cartao" id="planoPadrao" style="display: flex; flex-direction: column; justify-content: space-between;">
+                <h3>Profissional</h3>
+                <p class="preco">R$ 249/mês</p>
+                <p class="descricao">
+                  Para empresas em crescimento com necessidades avançadas
+                </p>
+                <ul class="listaBeneficios">
+                  <li>Até 5.000 transações/mês</li>
+                  <li>Conciliação automática</li>
+                  <li>Relatórios avançados</li>
+                  <li>5 usuários</li>
+                  <li>Suporte prioritário</li>
+                  <li>Integrações com adquirentes</li>
+                </ul>
+                <div><button class="botaoAcao primario" id="botaoPlanos">Plano Atual</button></div>
+              </div>
+
+              <div class="cartao" id="planoEmpresarial" style="display: flex; flex-direction: column; justify-content: space-between;">
+                <h3>Empresarial</h3>
+                <p class="preco">R$ 599/mês</p>
+                <p class="descricao">
+                  Para grandes empresas com alto volume de transações
+                </p>
+                <ul class="listaBeneficios">
+                  <li>Transações ilimitadas</li>
+                  <li>Conciliação automática avançada</li>
+                  <li>Relatórios personalizados</li>
+                  <li>Usuários ilimitados</li>
+                  <li>Suporte 24/7</li>
+                  <li>API completa</li>
+                  <li>Integrações personalizadas</li>
+                </ul>
+                <div><button class="botaoAcao secundario" id="botaoPlanos">Selecionar Plano</button></div>
+              </div>
+
+            </div>
+
+          
+
+          <div class="cartao">
+            <div class="cartaoCabecalho">
+              <h2>Detalhes do Plano Atual</h2>
+              <p>Informações sobre seu plano atual e seu uso.</p>
+            </div>
+            <div class="subsecao">
+              <div class="lado-esquerdo">
+                <h4>Uso Atual</h4>
+                <div class="info">Transações: 2.450 / 5.000</div>
+                <div class="barra-container">
+                  <div class="preenchimento-barra" style="width: 49%"></div>
+                </div>
+                <div class="info">Usuários: 3 / 5</div>
+                <div class="barra-container">
+                  <div class="preenchimento-barra" style="width: 60%"></div>
+                </div>
+                <div class="info">Armazenamento: 2.1 GB / 5 GB</div>
+                <div class="barra-container">
+                  <div class="preenchimento-barra" style="width: 42%"></div>
+                </div>
+              </div>
+              <div class="lado-direito">
+                <h4>Informações da Assinatura</h4>
+                <div class="info">
+                  <span class="rotulo">Plano atual:</span> Profissional
+                </div>
+                <div class="info">
+                  <span class="rotulo">Valor:</span> R$ 249/mês
+                </div>
+                <div class="info">
+                  <span class="rotulo">Próxima cobrança:</span> 15/06/2025
+                </div>
+                <div class="info">
+                  <span class="rotulo">Status:</span>
+                  <span class="etiqueta">Ativo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="secaoTitulo">Detalhes dos pagamentos</h2>
+
+          <div class="cartaoTabela">
+            <div class="cabecalhoRelatorio">
+              <div>
+                <h3>Métodos de Pagamentos</h3>
+                <p>
+                  Gerencie seus cartões de crédito e outros métodos de
+                  pagamento.
+                </p>
+              </div>
+              <button id="botao-adicionar-cartao" class="botaoAcao primario">
+                + Adicionar Cartão
+              </button>
+            </div>
+
+            <div class="tabelaContainer" id="cartoes-lista-planos">
+  <div class="cartaoTexto">
+    <div class="bancocard">
+      <div class="bancoIcone">
+        <img src="https://cdn.brandfetch.io/idhem73aId/w/400/h/400/theme/dark/icon.png?c=1dxbfHSJFAPEGdCLU4o5B" alt="Banco do Brasil">
+      </div>
+      <div>
+        <h2>Visa •••• 4587</h2>
+        <p>Expira em 07/2028</p>
+      </div>
+    </div>
+    <div class="acoesRelatorio">
+      <button class="botaoIcone"><i data-lucide="square-pen"></i></button>
+      <button class="botaoIcone" style="color: var(--perigo);"><i data-lucide="trash"></i></button>
+    </div>
+  </div>
+
+    <div class="cartaoTexto">
+    <div class="bancocard">
+      <div class="bancoIcone">
+        <img src="https://cdn.brandfetch.io/idFw8DodCr/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B" alt="Banco do Brasil">
+      </div>
+      <div>
+        <h2>Mastercard •••• 4587</h2>
+        <p>Expira em 09/2027</p>
+      </div>
+    </div>
+    <div class="acoesRelatorio">
+      <button class="botaoIcone"><i data-lucide="square-pen"></i></button>
+      <button class="botaoIcone" style="color: var(--perigo);"><i data-lucide="trash"></i></button>
+    </div>
+  </div>
+
+    <div class="cartaoTexto">
+    <div class="bancocard">
+      <div class="bancoIcone">
+        <img src="https://cdn.brandfetch.io/idhem73aId/w/400/h/400/theme/dark/icon.png?c=1dxbfHSJFAPEGdCLU4o5B" alt="Banco do Brasil">
+      </div>
+      <div>
+        <h2>Visa •••• 4587</h2>
+        <p>Expira em 08/2029</p>
+      </div>
+    </div>
+    <div class="acoesRelatorio">
+      <button class="botaoIcone"><i data-lucide="square-pen"></i></button>
+      <button class="botaoIcone" style="color: var(--perigo);"><i data-lucide="trash"></i></button>
+    </div>
+  </div>
+  
+
+            </div>
+          </div>
+
+          <div class="cartaoTabela">
+            <div class="cabecalhoRelatorio">
+              <h3>Histórico de Faturas</h3>
+            </div>
+            <div class="tabelaContainer">
+              <table class="tabela">
+                <thead>
+                  <tr>
+                    <th>Fatura</th>
+                    <th>Data</th>
+                    <th>Valor</th>
+                    <th>Status</th>
+                    <th>Download</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>INV-2025-005</td>
+                    <td>05/05/2025</td>
+                    <td>Hoje, 10:30</td>
+                    <td><span class="badge pendente">Em aberto</span></td>
+                    <td><i data-lucide="download"></i></td>
+                  </tr>
+                  <tr>
+                    <td>INV-2025-004</td>
+                    <td>05/04/2025</td>
+                    <td>Ontem, 15:45</td>
+                    <td><span class="badge completo">Fatura Paga</span></td>
+                    <td><i data-lucide="download"></i></td>
+                  </tr>
+                  <tr>
+                    <td>INV-2025-003</td>
+                    <td>05/03/2025</td>
+                    <td>22/03/2025, 09:15</td>
+                    <td><span class="badge completo">Fatura Paga</span></td>
+                    <td><i data-lucide="download"></i></td>
+                  </tr>
+                  <tr>
+                    <td>INV-2025-002</td>
+                    <td>05/02/2025</td>
+                    <td>15/02/2025, 14:20</td>
+                    <td><span class="badge completo">Fatura Paga</span></td>
+                    <td><i data-lucide="download"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trocaDeAbas" id="aba3">
+        <div class="cartoesGap">
+          <div class="cartaoTabela">
+            <div class="cabecalhoRelatorio">
+              <div>
+                <h3>Notificações por E-mail</h3>
+                <p>Configure quais notificações você deseja receber por email.</p>
+              </div>
+            </div>
+
+            <div class="tabelaContainer">
+              <div class="cartaoTexto">
+                <div>
+                  <label>Relatórios Diários</label>
+                  <p>Receba um resumo diário dos extratos financeiros</p>
+                </div>
+                <div class="toggle-switch active"></div>
+              </div>
+              <div class="cartaoTexto">
+                <div>
+                  <label>Novas Transações</label>
+                  <p>Seja notificado quando novas transações forem registradas</p>
+                </div>
+                <div class="toggle-switch active"></div>
+              </div>
+              <div class="cartaoTexto">
+                <div>
+                  <label>Divergências</label>
+                  <p>Seja notificado quando divergências forem detectadas</p>
+                </div>
+                <div class="toggle-switch active"></div>
+              </div>
+              <div class="cartaoTexto">
+                <div>
+                  <label>Alertas de Segurança</label>
+                  <p>Receba alertas sobre atividades suspeitas na sua conta</p>
+                </div>
+                <div class="toggle-switch active"></div>
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="cartaoTabela">
+            <div class="cabecalhoRelatorio">
+              <div>
+                <h3>Notificações no Sistema</h3>
+                <p>
+                  Configure quais notificações você deseja receber dentro do
+                  sistema.
+                </p>
+              </div>
+            </div>
+
+            <div class="tabelaContainer">
+              <div class="cartaoTexto">
+                <div>
+                  <label>Novas Transações</label>
+                  <p>
+                    Receba notificações quando novas transações forem registradas
+                  </p>
+                </div>
+                <div class="toggle-switch active"></div>
+              </div>
+              <div class="cartaoTexto">
+                <div>
+                  <label>Divergências</label>
+                  <p>Receba notificações quando divergências forem detectadas</p>
+                </div>
+                <div class="toggle-switch active"></div>
+              </div>
+              <div class="cartaoTexto">
+                <div>
+                  <label>Atividades de Usuários</label>
+                  <p>Seja notificado sobre ações de outros usuários no sistema</p>
+                </div>
+                <div class="toggle-switch active"></div>
+              </div>
+              <div class="cartaoTexto">
+                <div>
+                  <label>Atualizações do Sistema</label>
+                  <p>
+                    Receba notificações sobre novas funcionalidades e atualizações
+                  </p>
+                </div>
+                <div class="toggle-switch active"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="trocaDeAbas" id="aba4">
+        <div class="cartoesGap">
+
+          <div class="cartaoTabela">
+            <div class="cabecalhoRelatorio">
+              <div>
+                <h3>Alterar Senha</h3>
+                <p>Atualize sua senha para manter sua conta segura.</p>
+              </div>
+            </div>
+
+            <div class="tabelaContainer">
+              <div class="grid2">
+                <div class="campos">
+                  <label>Senha Atual</label>
+                  <input type="password" />
+                </div>
+                <div class="campos">
+                  <label>Nova Senha</label>
+                  <input type="password" />
+                </div>
+                <div class="campos">
+                  <label>Confirmar Nova Senha</label>
+                  <input type="password" />
+                </div>
+              </div>
+              <div class="botaoSalvar">
+                <button id="botaoSalvar" class="botaoAcao secundario">Salvar</button>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="cartaoTabela">
+            <div class="cabecalhoRelatorio">
+              <div>
+                <h3>Autenticação de Dois Fatores</h3>
+                <p>Adicione uma camada extra de segurança à sua conta.</p>
+              </div>
+            </div>
+
+            <div class="tabelaContainer">
+              <div class="cartaoTexto">
+                <p>
+                  Recomendamos fortemente ativar a autenticação de dois fatores
+                  para aumentar a segurança da sua conta.
+                </p>
+              </div>
+              <div class="campos">
+                <label>Método de Autenticação</label>
+                <select required>
+                  <option value="" disabled selected hidden></option>
+                  <option value="email">Email</option>
+                  <option value="sms">SMS</option>
+                </select>
+              </div>
+              <div class="botaoSalvar">
+                <button id="botaoSalvar" class="botaoAcao secundario">Salvar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="trocaDeAbas" id="aba5">
+    <div class="cartaoTabela">
+        <div class="cabecalhoRelatorio">
+            <div>
+                <h3>Integrações de Contas Bancárias</h3>
+                <p>Contas bancárias conectadas ao seu sistema</p>
+            </div>
+            <div class="acoesRelatorio">
+                <button class="botaoAcao primario">
+                    <i class="iconeTabela">+</i>
+                    Conectar Nova Conta
+                </button>
+            </div>
+        </div>
+<div class="tabelaContainer">
+  <div class="cartaoTexto">
+    <div class="bancocard">
+      <div class="bancoIcone">
+        <img src="https://cdn.brandfetch.io/idIXh-yQ32/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B" alt="Logo do Banco do Brasil">
+      </div>
+      <div>
+        <h2>Banco do Brasil</h2>
+        <p>Última sincronização: Hoje, 10:30</p>
+      </div>
+    </div>
+    <div class="acoesRelatorio">
+      <button class="botaoIcone"><i data-lucide="square-pen"></i></button>
+      <button class="botaoIcone" style="color: var(--perigo);"><i data-lucide="trash"></i></button>
+    </div>
+  </div>
+
+  <div class="cartaoTexto">
+    <div class="bancocard">
+      <div class="bancoIcone">
+        <img src="https://www.espm.br/wp-content/uploads/logo-caixa-economica-federal.jpg" alt="Logo da Caixa Econômica Federal">
+      </div>
+      <div>
+        <h2>Caixa Econômica</h2>
+        <p>Última sincronização: Ontem, 09:15</p>
+      </div>
+    </div>
+    <div class="acoesRelatorio">
+      <button class="botaoIcone"><i data-lucide="square-pen"></i></button>
+      <button class="botaoIcone" style="color: var(--perigo);"><i data-lucide="trash"></i></button>
+    </div>
+  </div>
+
+  <div class="cartaoTexto">
+    <div class="bancocard">
+      <div class="bancoIcone">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/2023_Ita%C3%BA_Unibanco_Logo.png/1200px-2023_Ita%C3%BA_Unibanco_Logo.png" alt="Logo do Itaú">
+      </div>
+      <div>
+        <h2>Itaú Unibanco</h2>
+        <p>Última sincronização: Ontem, 09:15</p>
+      </div>
+    </div>
+    <div class="acoesRelatorio">
+      <button class="botaoIcone"><i data-lucide="square-pen"></i></button>
+      <button class="botaoIcone" style="color: var(--perigo);"><i data-lucide="trash"></i></button>
+    </div>
+  </div>
+
+  <div class="cartaoTexto">
+    <div class="bancocard">
+      <div class="bancoIcone">
+        <img src="https://cdn.brandfetch.io/idXWQ2eElW/w/1079/h/1079/theme/dark/icon.png?c=1dxbfHSJFAPEGdCLU4o5B" alt="Logo do Nubank">
+      </div>
+      <div>
+        <h2>Nubank</h2>
+        <p>Última sincronização: Ontem, 09:15</p>
+      </div>
+    </div>
+    <div class="acoesRelatorio">
+      <button class="botaoIcone"><i data-lucide="square-pen"></i></button>
+      <button class="botaoIcone" style="color: var(--perigo);"><i data-lucide="trash"></i></button>
+    </div>
+  </div>
+
+  <div class="cartaoTexto">
+    <div class="bancocard">
+      <div class="bancoIcone">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBMzzwhF6T97uM-_Tcw8pYoE_22Y1luN10FA&s" alt="Logo do Banese">
+      </div>
+      <div>
+        <h2>Banese</h2>
+        <p>Última sincronização: Ontem, 09:15</p>
+      </div>
+    </div>
+    <div class="acoesRelatorio">
+      <button class="botaoIcone"><i data-lucide="square-pen"></i></button>
+      <button class="botaoIcone" style="color: var(--perigo);"><i data-lucide="trash"></i></button>
+    </div>
+  </div>
+
+  <div class="cartaoTexto">
+    <div class="bancocard">
+      <div class="bancoIcone">
+        <img src="https://cdn.brandfetch.io/idiIL9mteL/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B" alt="Logo do Banco Santander">
+      </div>
+      <div>
+        <h2>Santander</h2>
+        <p>Última sincronização: 01/05/2023, 16:45</p>
+      </div>
+    </div>
+    <div class="acoesRelatorio">
+      <button class="botaoIcone"><i data-lucide="square-pen"></i></button>
+      <button class="botaoIcone" style="color: var(--perigo);"><i data-lucide="trash"></i></button>
+    </div>
+  </div>
+</div>
+    </div>
+
+        <div class="cartaoTabela">
+        <div class="cabecalhoRelatorio">
+            <div>
+                <h3>Integrações com Adquirentes</h3>
+                <p>Gateways de pagamento conectados ao seu sistema</p>
+            </div>
+            <div class="acoesRelatorio">
+                <button class="botaoAcao primario">
+                    <i class="iconeTabela">+</i>
+                    Nova Integração
+                </button>
+            </div>
+        </div>
+<div class="tabelaContainer">
+  <div class="cartaoTexto">
+    <div class="bancocard">
+      <div class="bancoIcone">
+        <img src="https://yt3.googleusercontent.com/_UD6Q4QewU2tS1ECdRAbucPHaqVG6QnnSguIJY-gJxZNsc9cByz9mY3L8kidYqrscbgfCEDh3w=s900-c-k-c0x00ffffff-no-rj" alt="Logo da Cielo">
+      </div>
+      <div>
+        <h2>Cielo</h2>
+        <p>Última transação: Hoje, 15:22</p>
+      </div>
+    </div>
+    <div class="acoesRelatorio">
+      <button class="botaoIcone"><i data-lucide="square-pen"></i></button>
+      <button class="botaoIcone" style="color: var(--perigo);"><i data-lucide="trash"></i></button>
+    </div>
+  </div>
+
+  <div class="cartaoTexto">
+    <div class="bancocard">
+      <div class="bancoIcone">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTE_BZGrd5DbzyVTefhu2phzTX4NvYJ99u1A&s" alt="Logo da Stone">
+      </div>
+      <div>
+        <h2>Stone</h2>
+        <p>Última transação: Hoje, 11:08</p>
+      </div>
+    </div>
+    <div class="acoesRelatorio">
+      <button class="botaoIcone"><i data-lucide="square-pen"></i></button>
+      <button class="botaoIcone" style="color: var(--perigo);"><i data-lucide="trash"></i></button>
+    </div>
+  </div>
+
+  <div class="cartaoTexto">
+    <div class="bancocard">
+      <div class="bancoIcone">
+        <img src="https://cdn.brandfetch.io/id28dlmMhC/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B" alt="Logo do Mercado Pago">
+      </div>
+      <div>
+        <h2>Mercado Pago</h2>
+        <p>Status: Pendente</p>
+      </div>
+    </div>
+    <div class="acoesRelatorio">
+      <button class="botaoIcone"><i data-lucide="square-pen"></i></button>
+      <button class="botaoIcone" style="color: var(--perigo);"><i data-lucide="trash"></i></button>
+    </div>
+  </div>
+</div>
+    </div>
+
+
+      </div>
+    </main>
+
+    <div id="fundo-modal" class="fundo-modal escondido">
+      <div class="janela-modal">
+        <h2>Adicionar Cartão</h2>
+        <form id="formulario-cartao">
+          <label for="numero-cartao">Número do Cartão</label>
+          <input
+            type="text"
+            id="numero-cartao"
+            class="campo-input"
+            placeholder="Número do Cartão"
+          />
+
+          <label for="nome-titular">Nome do Titular</label>
+          <input
+            type="text"
+            id="nome-titular"
+            name="nome-titular"
+            placeholder="Nome como está no cartão"
+            required
+          />
+
+          <div class="grupo-campos">
+            <div class="campo">
+              <label for="validade">Validade</label>
+              <input
+                type="text"
+                id="validade"
+                class="campo-input"
+                placeholder="Validade (MM/AA)"
+              />
+            </div>
+
+            <div class="campo">
+              <label for="codigo-seguranca">CVV</label>
+              <input
+                type="text"
+                id="codigo-seguranca"
+                class="campo-input"
+                placeholder="Código de Segurança"
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="botao-principal">
+            Adicionar Cartão
+          </button>
+          <button type="button" id="botao-cancelar" class="botao-secundario">
+            Cancelar
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="../Assets/sidebar.js"></script>
+    <script src="configuracoes.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        lucide.createIcons();
+      });
+    </script>
+  </body>
+</html>

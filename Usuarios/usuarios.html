@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="usuarios.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <main class="conteudoPrincipal">
+        <header class="cabecalho">
+            <h1>Usuários</h1>
+                    <div class="barraNotificacao">
+
+            <div class="iconeBarra" id="seletorCategoria">
+                <i data-lucide="bell"></i>
+            </div>
+            <div class="imgBarra">
+                <i data-lucide="user"></i>
+            </div>
+        </div>
+        </header>
+      <section class="conteudo">
+
+        <div class="cartaoTabela">
+            <div class="cabecalhoRelatorio">
+              <h2>Lista de Usuários</h2>
+              <button class="botaoAcao primario" id="btnOpenForm">+ Adicionar Usuário</button>
+            </div>
+            <div class="tabelaContainer">
+            <table class="tabela">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Email</th>
+                  <th>Função</th>
+                  <th>Último Login</th>
+                </tr>
+              </thead>
+              <tbody id="usuariosTabela">
+                <tr>
+                  <td>Sid</td>
+                  <td>Sid.silva@example.com</td>
+                  <td><span class="tag admin">Administrador</span></td>
+                  <td>Hoje, 10:30</td>
+                </tr>
+                <tr>
+                  <td>Manny</td>
+                  <td>Manny.oliveira@example.com</td>
+                  <td><span class="tag gerente">Gerente</span></td>
+                  <td>Ontem, 15:45</td>
+                </tr>
+                <tr>
+                  <td>Diego</td>
+                  <td>Diego.santos@example.com</td>
+                  <td><span class="tag analista">Analista</span></td>
+                  <td>22/03/2025, 09:15</td>
+                </tr>
+                <tr>
+                  <td>Ellie</td>
+                  <td>Ellie.costa@example.com</td>
+                  <td><span class="tag operador">Operador</span></td>
+                  <td>15/02/2025, 14:20</td>
+                </tr>
+                <tr>
+                  <td>Buck</td>
+                  <td>Buck.santos@example.com</td>
+                  <td><span class="tag analista">Analista</span></td>
+                  <td>22/03/2025, 09:15</td>
+                </tr>
+                
+              </tbody>
+            </table>
+            </div>
+          </div>
+        
+
+
+       <div class="cartao">
+        <div class="perfilUsuario">
+            <div class="avatarPerfil">
+                <i data-lucide="user"></i>
+            </div>
+            <div class="infoPerfil">
+                <h3 id="perfilNome">Sid Silva</h3>
+                <p id="perfilEmail">Sid.silva@example.com</p>
+            </div>
+        </div>
+
+        <div id="funcao">
+        <h3>Função</h3>
+        <p id="perfilFuncao"><span class="tag admin">Administrador</span></p> 
+        </div>
+
+        <div id="permissao"><h3>Permissões</h3>
+        <span class="permissao">Importar Dados</span>
+        <span class="permissao">Adicionar Usuários</span>
+        <span class="permissao">Cadastrar Contas</span>
+        <span class="permissao">Alterar Taxas</span>
+        </div>
+
+        <div class="slider">
+         <div class="slides">   
+         <div class="notificacoes">
+            <h3>Histórico</h3>
+            <div class="listaNotificacoes">
+                <div class="itemNotificacao critico">
+                    <div class="conteudoNotificacao">
+                        <h4>Divergência	crítica</h4>
+                        <p>Venda #12345 de R$ 5.200,00 não encontrada no extrato da Cielo.</p>
+                    </div>
+                </div>
+                <div class="itemNotificacao alerta">
+                    <div class="conteudoNotificacao">
+                        <h4>Divergência	crítica</h4>
+                        <p>Venda #12345 de R$ 5.200,00 não encontrada no extrato da Cielo</p>
+                    </div>
+                </div>
+                <div class="itemNotificacao info">
+                    <div class="conteudoNotificacao">
+                        <h4>Importou dados bancários</h4>
+                        <p>Venda #12345 de R$ 5.200,00 não encontrada no extrato da Cielo</p>
+                    </div>
+                </div>
+            </div>
+         </div>
+        </div>
+      </section>    
+  </main>
+    
+          <div class="overlay" id="addUsuario">
+        <div class="modal">
+          <h2>Adicionar Novo Usuário</h2>
+          <p>Preencha os dados abaixo para criar um novo Usuário no sistema.</p>
+          <form class="form-grid" id="formAddUsuario">
+            <div>
+              <label for="nomeUsuario">Nome Completo</label>
+              <input type="text" id="nomeUsuario"/>
+            </div>
+            <div>
+              <label for="emailUsuario">E-mail</label>
+              <input type="email" id="emailUsuario"/>
+            </div>
+            <div>
+              <label for="funcaoUsuario">Função</label>
+              <select id="funcaoUsuario">
+                <option>Selecione uma função</option>
+                <option>Administrador</option>
+                <option>Gerente</option>
+                <option>Analista</option>
+                <option>Operador</option>
+              </select>
+            </div>
+            <div>
+              <label for="permissaoUsuario">Permissões</label>
+              <select id="permissaoUsuario">
+                <option>Selecione o nível de permissão</option>
+                <option>Básico</option>
+                <option>Avançado</option>
+              </select>
+            </div>
+            <div>
+              <label for="senhaUsuario">Senha</label>
+              <input type="password" id="senhaUsuario" />
+            </div>
+            <div>
+              <label for="confirmarSenhaUsuario">Confirmar Senha</label>
+              <input type="password" id="confirmarSenhaUsuario" />
+            </div>
+              <div class="form-actions">
+              <button type="button" id="btnCancel">Cancelar</button>
+              <button type="submit">Adicionar Usuário</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    <script src="../Assets/sidebar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+        });
+    </script>
+    <script src="usuarios.js"></script>
+</body>
+</html>
